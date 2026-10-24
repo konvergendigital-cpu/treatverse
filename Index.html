@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TREAT — Self-reward fashion. TREAT is a little something you give yourself. The first chapter is coming soon." />
+  <meta name="theme-color" content="#111111" />
+  <title>TREAT — TREAT YOURSELF | Official Teaser</title>
+
+  <!-- Optional Google Fonts Enhancement (Fallback to strong system fonts if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Primary Monochrome Palette */
+      --jet-black: #111111;
+      --deep-charcoal: #202020;
+      --mid-grey: #777777;
+      --light-grey: #E9E9E7;
+      --off-white: #F7F7F5;
+      --pure-white: #FFFFFF;
+
+      /* Border & Hairline Tokens */
+      --border-light: rgba(17, 17, 17, 0.14);
+      --border-dark: rgba(255, 255, 255, 0.16);
+
+      /* Typography Stack with Reliable System Fallbacks */
+      --font-display: 'Syne', 'Impact', 'Arial Black', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+      /* Layout & Spacing Tokens */
+      --container-max: 1380px;
+      --gutter: clamp(1.25rem, 4vw, 3.5rem);
+      --section-py: clamp(4.5rem, 9vw, 8.5rem);
+      --header-height: 84px;
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--off-white);
+      color: var(--jet-black);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--off-white);
+      color: var(--jet-black);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Subtle editorial paper texture overlay using pure CSS */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: radial-gradient(rgba(17, 17, 17, 0.035) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    ::selection {
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+    }
+
+    a,
+    button {
+      color: inherit;
+      text-decoration: none;
+      font-family: inherit;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    /* Accessible Focus States */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--jet-black);
+      outline-offset: 4px;
+    }
+
+    .dark-context a:focus-visible,
+    .dark-context button:focus-visible,
+    .dark-context input:focus-visible {
+      outline-color: var(--pure-white);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background-color: currentColor;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--header-height);
+      background-color: rgba(247, 247, 245, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+      group: brand;
+    }
+
+    .brand-monogram {
+      width: 40px;
+      height: 36px;
+      flex-shrink: 0;
+      transition: transform var(--transition-smooth);
+    }
+
+    .brand-link:hover .brand-monogram {
+      transform: scale(1.04);
+    }
+
+    .brand-wordmark-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-wordmark {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      line-height: 1;
+      text-transform: lowercase;
+      color: var(--jet-black);
+    }
+
+    .brand-subtag {
+      font-size: 0.56rem;
+      font-weight: 600;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-top: 0.25rem;
+    }
+
+    .header-center-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+    }
+
+    .header-center-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--jet-black);
+      display: inline-block;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--jet-black);
+      border: 1px solid var(--jet-black);
+      background-color: transparent;
+    }
+
+    .header-cta:hover {
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+    }
+
+    .status-pulse {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: currentColor;
+      animation: pulseOp 2.2s infinite ease-in-out;
+    }
+
+    @keyframes pulseOp {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.85); }
+    }
+
+    .hero-section {
+      position: relative;
+      padding-top: clamp(2.5rem, 6vw, 5rem);
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(2.5rem, 5vw, 5.5rem);
+      align-items: center;
+    }
+
+    .hero-meta-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 1rem;
+      margin-bottom: 2.25rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(3.1rem, 7.2vw, 6.6rem);
+      font-weight: 800;
+      line-height: 0.94;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .hero-headline .line-solid {
+      display: block;
+      color: var(--jet-black);
+    }
+
+    .hero-headline .line-outline {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--jet-black);
+      text-stroke: 2px var(--jet-black);
+      margin-top: 0.06em;
+      transition: color 0.4s ease;
+    }
+
+    .hero-headline:hover .line-outline {
+      color: var(--jet-black);
+    }
+
+    .hero-description {
+      font-size: clamp(1.02rem, 1.35vw, 1.22rem);
+      line-height: 1.75;
+      color: var(--deep-charcoal);
+      max-width: 56ch;
+      margin-bottom: 2.75rem;
+      font-weight: 400;
+    }
+
+    .hero-description strong {
+      font-weight: 600;
+      color: var(--jet-black);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      padding: 1.1rem 2.1rem;
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border: 1px solid var(--jet-black);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--deep-charcoal);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(17, 17, 17, 0.35);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 1.1rem 2rem;
+      background-color: transparent;
+      color: var(--jet-black);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      border: 1px solid var(--jet-black);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-grey);
+      transform: translateY(-2px);
+    }
+
+    .hero-essence-footnote {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .footnote-item span {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 0.3rem;
+    }
+
+    .footnote-item p {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--jet-black);
+    }
+
+    /* Editorial Campaign Visual (Pure CSS + Inline SVG Monogram Art) */
+    .hero-visual-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .editorial-poster {
+      position: relative;
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+      padding: clamp(1.75rem, 3.5vw, 2.75rem);
+      aspect-ratio: 4 / 5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      border: 1px solid var(--jet-black);
+      box-shadow: 0 28px 60px -20px rgba(17, 17, 17, 0.28);
+    }
+
+    /* Architectural editorial grid lines inside poster */
+    .editorial-poster::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .poster-top-bar,
+    .poster-bottom-bar {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--light-grey);
+      padding: 0.35rem 0.5rem;
+    }
+
+    .poster-centerpiece {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: auto 0;
+      padding: 1.5rem 0;
+    }
+
+    /* Geometric sacred frame around monogram */
+    .monogram-halo {
+      position: relative;
+      width: clamp(170px, 20vw, 240px);
+      height: clamp(170px, 20vw, 240px);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.85rem;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, rgba(17,17,17,0) 70%);
+    }
+
+    .monogram-halo::after {
+      content: "";
+      position: absolute;
+      inset: -12px;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+    }
+
+    .hero-emblem-svg {
+      width: 64%;
+      height: auto;
+      display: block;
+    }
+
+    .poster-wordmark {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 3.2vw, 3rem);
+      font-weight: 500;
+      letter-spacing: 0.42em;
+      text-transform: lowercase;
+      color: var(--pure-white);
+      margin-left: 0.42em; /* optical balance for letter-spacing */
+      line-height: 1;
+      margin-bottom: 0.65rem;
+    }
+
+    .poster-tagline {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-left: 0.38em;
+    }
+
+    .poster-editorial-badge {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background-color: var(--pure-white);
+      color: var(--jet-black);
+      border: 1px solid var(--jet-black);
+      padding: 0.95rem 1.25rem;
+      z-index: 3;
+      max-width: 240px;
+      box-shadow: 0 12px 28px rgba(17, 17, 17, 0.12);
+    }
+
+    .poster-editorial-badge .badge-label {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 0.25rem;
+    }
+
+    .poster-editorial-badge .badge-quote {
+      font-family: var(--font-serif);
+      font-size: 0.98rem;
+      font-style: italic;
+      line-height: 1.35;
+      color: var(--jet-black);
+    }
+
+    .ticker-section {
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+      border-bottom: 1px solid var(--jet-black);
+      overflow: hidden;
+      padding: 1.15rem 0;
+      position: relative;
+      user-select: none;
+    }
+
+    .ticker-wrap {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 32s linear infinite;
+    }
+
+    .ticker-section:hover .ticker-wrap {
+      animation-play-state: paused;
+    }
+
+    .ticker-track {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--font-display);
+      font-size: clamp(0.88rem, 1.4vw, 1.05rem);
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      padding: 0 2.2rem;
+      white-space: nowrap;
+    }
+
+    .ticker-separator {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background-color: var(--pure-white);
+      transform: rotate(45deg);
+      opacity: 0.6;
+    }
+
+    @keyframes marqueeScroll {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-50%, 0, 0);
+      }
+    }
+
+    /* Respect Reduced Motion Preference */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .ticker-wrap {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      .status-pulse {
+        animation: none;
+      }
+    }
+
+    .story-section {
+      padding: var(--section-py) 0;
+      background-color: var(--pure-white);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(2.5rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    .story-left {
+      position: sticky;
+      top: calc(var(--header-height) + 2.5rem);
+    }
+
+    .story-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.3vw, 3.85rem);
+      font-weight: 800;
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--jet-black);
+      margin-top: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .story-headline span {
+      display: block;
+      color: var(--mid-grey);
+    }
+
+    /* Brand Essence Editorial Callout Card */
+    .essence-box {
+      background-color: var(--off-white);
+      border-left: 3px solid var(--jet-black);
+      padding: 1.75rem 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .essence-box .essence-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .essence-box .essence-en {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--jet-black);
+      margin-bottom: 0.45rem;
+    }
+
+    .essence-box .essence-id {
+      font-size: 0.92rem;
+      color: var(--mid-grey);
+      font-style: italic;
+    }
+
+    .story-narrative {
+      display: flex;
+      flex-direction: column;
+      gap: 1.65rem;
+      padding-top: 0.5rem;
+    }
+
+    .story-lead {
+      font-size: clamp(1.18rem, 1.6vw, 1.42rem);
+      font-weight: 500;
+      line-height: 1.65;
+      color: var(--jet-black);
+    }
+
+    .story-body {
+      font-size: clamp(1rem, 1.15vw, 1.1rem);
+      line-height: 1.85;
+      color: var(--deep-charcoal);
+    }
+
+    .story-highlight-quote {
+      margin: 1rem 0;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .story-highlight-quote blockquote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--jet-black);
+    }
+
+    .story-closing {
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--jet-black);
+    }
+
+    /* Monogram Philosophy Strip inside Story Section */
+    .symbol-philosophy-card {
+      margin-top: 1.5rem;
+      padding: 1.65rem;
+      border: 1px solid var(--border-light);
+      background-color: var(--off-white);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .symbol-philosophy-icon {
+      width: 56px;
+      height: 50px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+      padding: 0.7rem;
+    }
+
+    .symbol-philosophy-text h3 {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--jet-black);
+      margin-bottom: 0.3rem;
+    }
+
+    .symbol-philosophy-text p {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--mid-grey);
+    }
+
+    .values-section {
+      padding: var(--section-py) 0;
+      background-color: var(--off-white);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .values-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: clamp(3rem, 6vw, 4.5rem);
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid var(--jet-black);
+    }
+
+    .values-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-top: 0.75rem;
+    }
+
+    .values-subtitle {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      font-weight: 600;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--border-light);
+      border-left: 1px solid var(--border-light);
+    }
+
+    .value-card {
+      background-color: var(--pure-white);
+      padding: clamp(2rem, 3.8vw, 3.25rem);
+      border-right: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background-color var(--transition-smooth), color var(--transition-smooth);
+      position: relative;
+    }
+
+    .value-card:hover {
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+    }
+
+    .value-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2.75rem;
+    }
+
+    .value-index {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid currentColor;
+    }
+
+    .value-icon {
+      width: 28px;
+      height: 28px;
+      stroke: currentColor;
+      opacity: 0.85;
+    }
+
+    .value-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.65rem;
+      line-height: 1.2;
+    }
+
+    .value-quote {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--mid-grey);
+      margin-bottom: 1.5rem;
+      display: block;
+      transition: color var(--transition-smooth);
+    }
+
+    .value-card:hover .value-quote {
+      color: var(--light-grey);
+    }
+
+    .value-divider {
+      width: 100%;
+      height: 1px;
+      background-color: var(--border-light);
+      margin-bottom: 1.5rem;
+      transition: background-color var(--transition-smooth);
+    }
+
+    .value-card:hover .value-divider {
+      background-color: var(--border-dark);
+    }
+
+    .value-desc {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: var(--deep-charcoal);
+      transition: color var(--transition-smooth);
+    }
+
+    .value-card:hover .value-desc {
+      color: var(--light-grey);
+    }
+
+    .coming-soon-section {
+      background-color: var(--deep-charcoal);
+      color: var(--pure-white);
+      padding: clamp(5rem, 11vw, 9.5rem) 0;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    /* Subtle Giant Watermark Monogram in Background */
+    .coming-soon-watermark {
+      position: absolute;
+      right: -4%;
+      bottom: -12%;
+      width: clamp(320px, 46vw, 640px);
+      height: auto;
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .coming-soon-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .coming-micro-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 1.2rem;
+      border: 1px solid var(--border-dark);
+      background-color: rgba(255, 255, 255, 0.03);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--light-grey);
+      margin-bottom: 2.25rem;
+    }
+
+    .coming-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.65rem, 6.2vw, 5.5rem);
+      font-weight: 800;
+      line-height: 0.98;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+      color: var(--pure-white);
+      margin-bottom: 2rem;
+    }
+
+    .coming-headline .outline-light {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--pure-white);
+      text-stroke: 1.5px var(--pure-white);
+      margin-top: 0.08em;
+    }
+
+    .coming-description {
+      font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+      line-height: 1.8;
+      color: var(--light-grey);
+      max-width: 60ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .coming-chapter-line {
+      font-family: var(--font-serif);
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
+      font-style: italic;
+      color: var(--pure-white);
+      margin-bottom: 3rem;
+    }
+
+    .btn-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      padding: 1.15rem 2.5rem;
+      background-color: var(--pure-white);
+      color: var(--jet-black);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      border: 1px solid var(--pure-white);
+    }
+
+    .btn-light:hover {
+      background-color: transparent;
+      color: var(--pure-white);
+      transform: translateY(-2px);
+    }
+
+    /* Interactive Curiosity Drawer / Panel triggered by STAY CURIOUS */
+    .curiosity-drawer {
+      width: 100%;
+      max-width: 620px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, margin-top 0.4s ease;
+      margin-top: 0;
+    }
+
+    .curiosity-drawer.is-open {
+      max-height: 360px;
+      opacity: 1;
+      margin-top: 2.5rem;
+    }
+
+    .curiosity-card {
+      background-color: var(--jet-black);
+      border: 1px solid var(--border-dark);
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .curiosity-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .curiosity-card-header span {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+    }
+
+    .curiosity-close {
+      background: none;
+      border: none;
+      color: var(--light-grey);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .curiosity-card p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--light-grey);
+      margin-bottom: 1.25rem;
+    }
+
+    .curiosity-manifesto-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--pure-white);
+      padding: 0.45rem 0.85rem;
+      border: 1px solid var(--border-dark);
+    }
+
+    .site-footer {
+      background-color: var(--jet-black);
+      color: var(--pure-white);
+      padding: clamp(3.5rem, 7vw, 5.5rem) 0 2.5rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--border-dark);
+      align-items: start;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-logo-lockup {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-monogram {
+      width: 54px;
+      height: 48px;
+    }
+
+    .footer-wordmark {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: 0.36em;
+      text-transform: lowercase;
+      color: var(--pure-white);
+      line-height: 1;
+    }
+
+    .footer-tagline {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 1rem;
+    }
+
+    .footer-essence {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--light-grey);
+      max-width: 38ch;
+    }
+
+    .footer-nav-area {
+      display: flex;
+      justify-content: flex-end;
+      gap: clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .footer-nav-col h4 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .footer-nav-list a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--light-grey);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .footer-nav-list a:hover {
+      color: var(--pure-white);
+      transform: translateX(4px);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--mid-grey);
+      letter-spacing: 0.08em;
+    }
+
+    .footer-bottom-right {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.7rem;
+      color: var(--light-grey);
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+
+      .hero-visual-wrapper {
+        max-width: 540px;
+        margin: 0 auto;
+      }
+
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .story-left {
+        position: static;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --header-height: 72px;
+      }
+
+      .header-center-tag {
+        display: none;
+      }
+
+      .hero-meta-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+
+      .hero-headline {
+        font-size: clamp(2.65rem, 11vw, 4.2rem);
+      }
+
+      .hero-headline .line-outline {
+        -webkit-text-stroke: 1.5px var(--jet-black);
+        text-stroke: 1.5px var(--jet-black);
+      }
+
+      .poster-editorial-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        max-width: 100%;
+        margin-top: 1rem;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .footer-nav-area {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-wordmark {
+        font-size: 1.3rem;
+        letter-spacing: 0.22em;
+      }
+
+      .brand-subtag {
+        display: none;
+      }
+
+      .header-cta {
+        padding: 0.55rem 0.9rem;
+        font-size: 0.66rem;
+        letter-spacing: 0.16em;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .btn-light {
+        width: 100%;
+        padding: 1.05rem 1.5rem;
+      }
+
+      .hero-essence-footnote {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+      }
+
+      .symbol-philosophy-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-nav-area {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+    Proportional SVG reconstruction based on the official TREAT visual reference:
+    Two lowercase "t" letterforms placed back-to-back, joined by a V-shaped top bridge
+    and continuous horizontal crossbar, with outward-curving bottom terminals.
+  -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="sr-only" aria-hidden="true">
+    <symbol id="treat-monogram" viewBox="0 0 200 175">
+      <!-- Left & Right vertical stems with outward-curving bottom hooks -->
+      <path
+        d="M 68 22 L 68 122 C 68 152 34 152 22 130"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="20"
+        stroke-linecap="butt"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M 132 22 L 132 122 C 132 152 166 152 178 130"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="20"
+        stroke-linecap="butt"
+        stroke-linejoin="round"
+      />
+      <!-- Top V-bridge connecting the two 't' stems -->
+      <path
+        d="M 62 22 L 100 54 L 138 22"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="15"
+        stroke-linecap="square"
+        stroke-linejoin="miter"
+      />
+      <!-- Horizontal crossbar -->
+      <line
+        x1="28"
+        y1="56"
+        x2="172"
+        y2="56"
+        stroke="currentColor"
+        stroke-width="14"
+        stroke-linecap="butt"
+      />
+    </symbol>
+  </svg>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Left: TREAT Logo Lockup -->
+      <a href="#top" class="brand-link" aria-label="TREAT — Beranda">
+        <svg class="brand-monogram" role="img" aria-label="Monogram TREAT">
+          <use href="#treat-monogram"></use>
+        </svg>
+        <div class="brand-wordmark-group">
+          <span class="brand-wordmark">treat</span>
+          <span class="brand-subtag">TREAT YOURSELF</span>
+        </div>
+      </a>
+
+      <!-- Center: Category Positioning -->
+      <div class="header-center-tag" aria-label="Brand Positioning">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Self-reward fashion</span>
+      </div>
+
+      <!-- Right: Coming Soon Link -->
+      <a href="#coming-soon" class="header-cta">
+        <span class="status-pulse" aria-hidden="true"></span>
+        <span>COMING SOON</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <!-- Left Column: Typography & CTA -->
+        <div class="hero-content">
+          <div class="hero-meta-top">
+            <span>OFFICIAL BRAND TEASER</span>
+            <span>EDITION 01 — SELF-REWARD</span>
+          </div>
+
+          <h1 id="hero-title" class="hero-headline">
+            <span class="line-solid">YOUR STYLE.</span>
+            <span class="line-outline">YOUR RULES.</span>
+          </h1>
+
+          <p class="hero-description">
+            Bukan sekadar apa yang kamu pakai. Ini tentang bagaimana kamu mengekspresikan diri, merayakan hal-hal kecil, dan memilih sesuatu yang terasa paling kamu. <strong>TREAT is coming.</strong>
+          </p>
+
+          <div class="hero-actions">
+            <a href="#brand-story" class="btn-primary">
+              <span>DISCOVER TREAT</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#coming-soon" class="btn-secondary">
+              <span>COMING SOON</span>
+            </a>
+          </div>
+
+          <div class="hero-essence-footnote">
+            <div class="footnote-item">
+              <span>BRAND ESSENCE</span>
+              <p>“TREAT is a little something you give yourself.”</p>
+            </div>
+            <div class="footnote-item">
+              <span>MAKNA</span>
+              <p>“Cara kecil untuk merayakan diri sendiri.”</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Monochrome Editorial Campaign Artwork -->
+        <div class="hero-visual-wrapper">
+          <div class="editorial-poster" role="img" aria-label="Komposisi visual editorial monokrom TREAT menampilkan monogram dua huruf t yang menyatu dan tagline TREAT YOURSELF">
+            <div class="poster-top-bar">
+              <span>TREAT STUDIO</span>
+              <span>IDENTITY ARCHIVE</span>
+            </div>
+
+            <div class="poster-centerpiece">
+              <div class="monogram-halo">
+                <svg class="hero-emblem-svg" aria-hidden="true">
+                  <use href="#treat-monogram"></use>
+                </svg>
+              </div>
+              <div class="poster-wordmark">treat</div>
+              <div class="poster-tagline">TREAT YOURSELF</div>
+            </div>
+
+            <div class="poster-bottom-bar">
+              <span>SELF-EXPRESSION</span>
+              <span>FIRST CHAPTER</span>
+            </div>
+          </div>
+
+          <div class="poster-editorial-badge">
+            <span class="badge-label">PHILOSOPHY NOTE</span>
+            <p class="badge-quote">“I’m giving myself a treat today.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker-section" aria-label="Pernyataan Brand TREAT">
+      <div class="ticker-wrap">
+        <!-- Track 1 -->
+        <div class="ticker-track">
+          <span class="ticker-item">TREAT YOURSELF</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">OWN YOUR STYLE</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">MAKE IT PERSONAL</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">COMING SOON</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">TREAT YOURSELF</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">OWN YOUR STYLE</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">MAKE IT PERSONAL</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+          <span class="ticker-item">COMING SOON</span>
+          <span class="ticker-separator" aria-hidden="true"></span>
+        </div>
+        <!-- Track 2 (Duplicate for seamless infinite loop) -->
+        <div class="ticker-track" aria-hidden="true">
+          <span class="ticker-item">TREAT YOURSELF</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">OWN YOUR STYLE</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">MAKE IT PERSONAL</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">COMING SOON</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">TREAT YOURSELF</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">OWN YOUR STYLE</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">MAKE IT PERSONAL</span>
+          <span class="ticker-separator"></span>
+          <span class="ticker-item">COMING SOON</span>
+          <span class="ticker-separator"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand-story" class="story-section" aria-labelledby="story-title">
+      <div class="container story-grid">
+        <!-- Left Column: Editorial Headline & Essence Box -->
+        <div class="story-left">
+          <span class="eyebrow">BRAND STORY</span>
+          <h2 id="story-title" class="story-headline">
+            STYLE IS PERSONAL.
+            <span>SO IS YOUR REWARD.</span>
+          </h2>
+
+          <div class="essence-box">
+            <span class="essence-label">BRAND ESSENCE</span>
+            <p class="essence-en">“TREAT is a little something you give yourself.”</p>
+            <p class="essence-id">“TREAT adalah cara kecil untuk merayakan diri sendiri.”</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Narrative Copy & Symbol Meaning -->
+        <div class="story-narrative">
+          <p class="story-lead">
+            TREAT lahir dari satu ide sederhana: kamu nggak perlu menunggu momen besar untuk merasa layak mendapatkan sesuatu yang menyenangkan.
+          </p>
+
+          <p class="story-body">
+            Kami melihat fashion sebagai cara untuk mengekspresikan siapa dirimu—bebas, personal, dan selalu berkembang.
+          </p>
+
+          <p class="story-body">
+            Sebuah pilihan kecil yang bisa mengubah mood, menambah percaya diri, dan membuat harimu terasa lebih berarti.
+          </p>
+
+          <div class="story-highlight-quote">
+            <blockquote>
+              “TREAT is a little something you give yourself.”
+            </blockquote>
+          </div>
+
+          <p class="story-closing">
+            Bukan untuk menjadi orang lain. Untuk merayakan dirimu sendiri.
+          </p>
+
+          <!-- Visual Identity Note based on Logo Reference -->
+          <div class="symbol-philosophy-card">
+            <div class="symbol-philosophy-icon" aria-hidden="true">
+              <svg width="34" height="30" viewBox="0 0 200 175">
+                <use href="#treat-monogram"></use>
+              </svg>
+            </div>
+            <div class="symbol-philosophy-text">
+              <h3>THE MONOGRAM PHILOSOPHY</h3>
+              <p>
+                Dibentuk dari dua huruf “t” yang saling berhadapan dan menyatu—simbol keseimbangan, hadiah kecil untuk diri sendiri, dan identitas yang minimal serta timeless.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand-values" class="values-section" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="values-header">
+          <div>
+            <span class="eyebrow">CORE PILLARS</span>
+            <h2 id="values-heading" class="values-title">WHAT WE STAND FOR</h2>
+          </div>
+          <p class="values-subtitle">SELF-REWARD &bull; SELF-EXPRESSION &bull; YOUTH CULTURE</p>
+        </div>
+
+        <div class="values-grid">
+          <!-- Value 01 -->
+          <article class="value-card">
+            <div>
+              <div class="value-top">
+                <span class="value-index">01</span>
+                <!-- Gift / Self-Reward Icon -->
+                <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.6" aria-hidden="true">
+                  <rect x="3" y="8" width="18" height="4" />
+                  <path d="M5 12v8h14v-8" />
+                  <path d="M12 8v12" />
+                  <path d="M12 8H7.5a2.5 2.5 0 1 1 0-5C11 3 12 8 12 8Z" />
+                  <path d="M12 8h4.5a2.5 2.5 0 1 0 0-5C13 3 12 8 12 8Z" />
+                </svg>
+              </div>
+              <h3 class="value-name">01 — SELF-REWARD</h3>
+              <span class="value-quote">“A reason to celebrate you.”</span>
+              <div class="value-divider"></div>
+            </div>
+            <p class="value-desc">
+              Hadiah kecil untuk diri sendiri, karena kamu tidak harus menunggu alasan besar untuk merayakan dirimu.
+            </p>
+          </article>
+
+          <!-- Value 02 -->
+          <article class="value-card">
+            <div>
+              <div class="value-top">
+                <span class="value-index">02</span>
+                <!-- Garment / Self-Expression Icon -->
+                <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.6" aria-hidden="true">
+                  <path d="M16 3l5 4-3 4-2-1.5V21H8V9.5L6 11 3 7l5-4c1.2 1.5 2.5 2 4 2s2.8-.5 4-2z" />
+                </svg>
+              </div>
+              <h3 class="value-name">02 — SELF-EXPRESSION</h3>
+              <span class="value-quote">“Wear what feels like you.”</span>
+              <div class="value-divider"></div>
+            </div>
+            <p class="value-desc">
+              Gaya adalah bahasa personal. Temukan cara berpakaian yang terasa autentik untuk dirimu.
+            </p>
+          </article>
+
+          <!-- Value 03 -->
+          <article class="value-card">
+            <div>
+              <div class="value-top">
+                <span class="value-index">03</span>
+                <!-- Spark / Everyday Energy Icon -->
+                <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.6" aria-hidden="true">
+                  <path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" />
+                </svg>
+              </div>
+              <h3 class="value-name">03 — EVERYDAY ENERGY</h3>
+              <span class="value-quote">“Make ordinary feel special.”</span>
+              <div class="value-divider"></div>
+            </div>
+            <p class="value-desc">
+              Fashion yang menemani keseharian dengan karakter, kepercayaan diri, dan ekspresi personal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coming-soon" class="coming-soon-section dark-context" aria-labelledby="coming-soon-title">
+      <!-- Subtle Background Monogram Watermark -->
+      <svg class="coming-soon-watermark" aria-hidden="true">
+        <use href="#treat-monogram"></use>
+      </svg>
+
+      <div class="container coming-soon-inner">
+        <div class="coming-micro-tag">
+          <span class="status-pulse" aria-hidden="true"></span>
+          <span>YOUR NEXT FAVORITE IS ON ITS WAY.</span>
+        </div>
+
+        <h2 id="coming-soon-title" class="coming-headline">
+          <span>NOT HERE YET.</span>
+          <span class="outline-light">WORTH THE WAIT.</span>
+        </h2>
+
+        <p class="coming-description">
+          Website TREAT sedang disiapkan. Sebuah destination baru untuk fashion anak muda yang punya karakter, terasa personal, dan dekat dengan cara kamu mengekspresikan diri.
+        </p>
+
+        <p class="coming-chapter-line">
+          The first chapter is coming soon.
+        </p>
+
+        <button
+          type="button"
+           id="stay-curious-btn"
+          class="btn-light"
+          aria-expanded="false"
+          aria-controls="curiosity-panel"
+        >
+          <span>STAY CURIOUS</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 5v14M5 12h14" />
+          </svg>
+        </button>
+
+        <!-- Interactive Teaser Note when user clicks STAY CURIOUS -->
+        <div id="curiosity-panel" class="curiosity-drawer" role="region" aria-label="Pesan Teaser TREAT">
+          <div class="curiosity-card">
+            <div class="curiosity-card-header">
+              <span>TREAT // CHAPTER 01 DISPATCH</span>
+              <button type="button" id="close-curious-btn" class="curiosity-close" aria-label="Tutup pesan">
+                [ CLOSE ]
+              </button>
+            </div>
+            <p>
+              TREAT tidak sedang meminta perhatian—kami sedang menyiapkan ruang bagi kamu yang merayakan diri sendiri lewat pilihan gaya sehari-hari. Nantikan kehadiran koleksi perdana kami.
+            </p>
+            <span class="curiosity-manifesto-tag">TREAT IS COMING. A NEW WAY TO TREAT YOURSELF.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer dark-context" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Left: White Logo & Tagline -->
+        <div class="footer-brand">
+          <a href="#top" class="footer-logo-lockup" aria-label="Kembali ke atas — TREAT">
+            <svg class="footer-monogram" role="img" aria-label="Logo TREAT versi putih">
+              <use href="#treat-monogram"></use>
+            </svg>
+            <span class="footer-wordmark">treat</span>
+          </a>
+          <p class="footer-tagline">TREAT YOURSELF</p>
+          <p class="footer-essence">“TREAT is a little something you give yourself.”</p>
+        </div>
+
+        <!-- Right: Internal Navigation Links -->
+        <div class="footer-nav-area">
+          <nav class="footer-nav-col" aria-label="Navigasi Footer">
+            <h4>EXPLORE</h4>
+            <ul class="footer-nav-list">
+              <li><a href="#brand-story">Brand Story</a></li>
+              <li><a href="#brand-values">Brand Values</a></li>
+              <li><a href="#coming-soon">Coming Soon</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-nav-col">
+            <h4>IDENTITY</h4>
+            <ul class="footer-nav-list">
+              <li><a href="#top">Self-Reward Fashion</a></li>
+              <li><a href="#coming-soon">First Chapter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2026</span> TREAT. All rights reserved.</p>
+        <p class="footer-bottom-right">TREAT YOURSELF. THE WAIT STARTS HERE.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      try {
+        // 1. Dynamic Copyright Year Update
+        var yearEl = document.getElementById('current-year');
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+
+        // 2. Interactive "STAY CURIOUS" Teaser Panel Toggle
+        var curiousBtn = document.getElementById('stay-curious-btn');
+        var closeBtn = document.getElementById('close-curious-btn');
+        var curiousPanel = document.getElementById('curiosity-panel');
+
+        if (curiousBtn && curiousPanel) {
+          curiousBtn.addEventListener('click', function () {
+            var isOpen = curiousPanel.classList.toggle('is-open');
+            curiousBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        }
+
+        if (closeBtn && curiousBtn && curiousPanel) {
+          closeBtn.addEventListener('click', function () {
+            curiosityClose();
+          });
+        }
+
+        function curiosityClose() {
+          curiousPanel.classList.remove('is-open');
+          curiousBtn.setAttribute('aria-expanded', 'false');
+          curiousBtn.focus();
+        }
+      } catch (err) {
+        console.error('TREAT initialization error:', err);
+      }
+    })();
+  </script>
+</body>
+</html>
